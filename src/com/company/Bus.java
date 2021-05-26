@@ -10,7 +10,7 @@ public class Bus {
         int n = 1;
         int numbCrash;
         int highBridge;
-        int conrolCrash = 0;
+        int controlCrash = 0;
         final int EXIT_CODE = -1;
         String crashMessage = "";
 
@@ -22,15 +22,15 @@ public class Bus {
 
         highBridge = input.nextInt();
 
-        if(highBridge<=highBus && conrolCrash!=EXIT_CODE){
+        if(highBridge<=highBus && controlCrash!=EXIT_CODE){
             numbCrash = n;
-            conrolCrash = EXIT_CODE;
+            controlCrash = EXIT_CODE;
             crashMessage +=  String.format("Crash %d",numbCrash);
         }
             n++;
         } while (n<=countBridge);
 
-        if(conrolCrash==EXIT_CODE)
+        if(controlCrash==EXIT_CODE)
         {
             System.out.println(crashMessage);
         }

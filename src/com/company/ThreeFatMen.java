@@ -7,7 +7,7 @@ public class ThreeFatMen {
 
         int weight_1, weight_2, weight_3;
         int lowWeightBorder = 94 ;
-        int highWeightBorder = 1000 ;
+        int highWeightBorder = 727 ;
         int maxWeight;
         boolean ErrorCheck = false;
         String outputMessage = "";

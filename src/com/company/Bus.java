@@ -7,8 +7,13 @@ public class Bus {
     public static void main(String[] args) {
         final int highBus = 437;
         int countBridge;
-        int n = 0;
+        int n = 1;
+        int numbCrash;
         int highBridge;
+        int conrolCrash = 0;
+        final int EXIT_CODE = -1;
+        String crashMessage = "";
+
 
         Scanner input = new Scanner(System.in);
         countBridge = input.nextInt();
@@ -16,8 +21,21 @@ public class Bus {
         do {
 
         highBridge = input.nextInt();
-        if(highBridge<=highBus)
+
+        if(highBridge<=highBus && conrolCrash!=EXIT_CODE){
+            numbCrash = n;
+            conrolCrash = EXIT_CODE;
+            crashMessage +=  String.format("Crash %d",numbCrash);
+        }
             n++;
-        } while (n <= countBridge);
+        } while (n<=countBridge);
+
+        if(conrolCrash==EXIT_CODE)
+        {
+            System.out.println(crashMessage);
+        }
+        else {
+            System.out.println("No crash");
+        }
     }
 }
